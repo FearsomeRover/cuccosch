@@ -4,11 +4,11 @@
   margin-top: 10px;
   margin-bottom: 20px;
 }
-/*.borderdebug{*/
-/*  border: black;*/
-/*  border-style: dashed;*/
+.borderdebug{
+  border: black;
+  border-style: dashed;
 
-/*}*/
+}
 .pages{
   background-color: black;
   padding-top: 7px;
@@ -24,4 +24,38 @@
 }
 a{
   text-decoration: none;
+}
+.namecol{
+  text-align: left
+}
+.avcol{
+  text-align: left;
+  width:10%
+}
+.placecol{
+  width: 15%;
+  text-align: center
+}
+.editcol{
+  width:5%;
+}
+.deletecol{
+  width:5%
+}
+.szobacol{
+  text-align: left
+}
+.cucccol{
+  text-align: left;
+  width:30%
+}
+.tagcol{
+  width: 15%;
+  text-align: center
+}
+.editcol{
+  width:5%;
+}
+.deletecol{
+  width:5%
 }
