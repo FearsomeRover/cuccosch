@@ -4,11 +4,16 @@
   margin-top: 10px;
   margin-bottom: 20px;
 }
-.borderdebug{
-  border: black;
-  border-style: dashed;
+.font{
+  font-family: "Century Gothic", sans-serif;
+
 
 }
+/*.borderdebug{*/
+/*  border: black;*/
+/*  border-style: dashed;*/
+
+/*}*/
 .pages{
   background-color: black;
   padding-top: 7px;
@@ -26,6 +31,7 @@ a{
   text-decoration: none;
 }
 .namecol{
+  padding-left: 20px;
   text-align: left
 }
 .avcol{
@@ -43,13 +49,16 @@ a{
   width:5%
 }
 .szobacol{
+  padding-left: 20px;
   text-align: left
 }
 .cucccol{
+  padding-left: 20px;
   text-align: left;
   width:30%
 }
 .tagcol{
+  padding-left: 20px;
   width: 15%;
   text-align: center
 }
@@ -58,4 +67,16 @@ a{
 }
 .deletecol{
   width:5%
+}
+.tag{
+  text-align: center;
+  width: 30%;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.availability{
+  margin: 0px 20px;
+  padding: 5px 10px;
+  border-radius: 25px;
+  font-size: 15px;
 }
