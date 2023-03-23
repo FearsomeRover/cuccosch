@@ -1,0 +1,27 @@
+.wtext{
+  color: white;
+  font-family: "Century Gothic", sans-serif;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+/*.borderdebug{*/
+/*  border: black;*/
+/*  border-style: dashed;*/
+
+/*}*/
+.pages{
+  background-color: black;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 25px;
+  margin-left: 15px;
+  margin-right: 15px;
+  display: block;
+}
+
+.pages:hover {
+  background-color: #01baef;
+}
+a{
+  text-decoration: none;
+}
