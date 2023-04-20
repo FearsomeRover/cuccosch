@@ -1,0 +1,90 @@
+<html>
+<%- include('header') -%>
+<table class="borderdebug coloredtable hfill" style="width:80%;margin-left: 10%; border: none">
+  <tr style="width:80%; height: 5%; text-align: center; border: none">
+    <th class="borderdebug namecol tablehead">
+      <p class="font">
+        Név
+      </p>
+    </th>
+    <th class="borderdebug avcol  tablehead">
+      <p class="font">
+        Elerhetőség
+      </p>
+    </th>
+    <th class="borderdebug placecol  tablehead">
+      <p class="font">
+        Helyszín
+      </p>
+    </th>
+    <th class="borderdebug editcol tablehead">
+    </th>
+
+    <th class="borderdebug deletecol  tablehead">
+
+    </th>
+  </tr>
+  <% cuccok.forEach(function(cucc){ %>
+    <tr style="height: 12%">
+      <th class="borderdebug namecol">
+        <p class="font">
+          <%=cucc.name%>
+        </p>
+      </th>
+      <th class="borderdebug avcol font center-align" style="vertical-align: center">
+        <% if(cucc.availability){%>
+          <h4 style="background-color: darkseagreen" class="availability font">
+            Elérhető
+          </h4>
+        <%}else{%>
+          <h4 style="background-color: indianred " class="availability font">
+            Foglalt
+          </h4>
+        <%}%>
+
+      </th>
+      <th class="borderdebug placecol">
+        <p class="font">
+          <%=cucc.place%>
+        </p>
+      </th>
+
+      <th class="borderdebug editcol">
+        <a href="/cuccok/edit/<%=cucc.id%>">
+          <img src="images/icons/edit.svg", style="width: 60%; height: 60%">
+        </a>
+      </th>
+
+      <th class="borderdebug deletecol">
+        <a href="/cuccok/delete/<%=cucc.id%>">
+          <img src="images/icons/delete.svg" class="fill60">
+        </a>
+      </th>
+    </tr>
+  <% }); %>
+
+  <tr class="borderdebug" style="background-color: white">
+    <th class="borderdebug namecol">
+    </th>
+    <th class="borderdebug avcol center-align " style="vertical-align: center">
+
+    </th>
+    <th class="borderdebug placecol">
+    </th>
+
+    <th class="borderdebug editcol">
+    </th>
+
+    <th class="borderdebug deletecol">
+    </th>
+  </tr>
+</table>
+<a href="/newCucc" style="position: absolute; right: 5%; bottom: 5%" >
+  <div class="btn primary_color">
+    <img src="images/icons/add.svg", style="width: 5rem; height: 5rem; color: white">
+  </div>
+</a>
+
+</body>
+
+</html>

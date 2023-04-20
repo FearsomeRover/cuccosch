@@ -1,0 +1,52 @@
+<html>
+<%- include('header') -%>
+<form action="/ujtag" style="padding-top: 10%">
+    <table class="center-align wfill">
+        <tr>
+            <th colspan="2" class="borderdebug center-align">
+                <p class="f50 black">
+                    Új szoba hozzáadása
+                </p>
+            </th>
+        </tr>
+        <tr class="borderdebug">
+            <th colspan="2" class="borderdebug">
+                <label for="" class="font f30">
+                    Szobaszám:<br>
+                </label>
+                <input class="font f30" type="text" placeholder="Szobaszám"
+                       style="text-align: center; width: 30%;margin: 30px"><br>
+                <label class="font f30" for="">
+                    Tagok:<br>
+                </label>
+                <input class="font tag" type="text" placeholder="Tag1" style="margin-top: 30px">
+                <br>
+                <input class="font tag" type="text" placeholder="Tag2">
+                <br>
+                <input class="font tag" type="text" placeholder="Tag3">
+                <br>
+                <input class="font tag" type="text" placeholder="Tag4">
+            </th>
+        </tr>
+        <tr>
+
+            <th class="borderdebug" style="width: 50%; margin-left: 100%; padding-right: 20px">
+                <input type="submit" class="wtext pages white noBorder center-align" value="Mentés"
+                       style="font-size: 20px;width: 30%; float: right;font-weight: bold">
+            </th>
+            <th class="borderdebug" style="text-align: left; padding-left:20px">
+                <a href="/szobak">
+                    <h2 class="wtext pages white center-align white" style="font-size: 20px;width: 30%" >
+                        Mégse
+                    </h2>
+                </a>
+
+
+            </th>
+        </tr>
+    </table>
+</form>
+
+
+</html>
+<style></style>

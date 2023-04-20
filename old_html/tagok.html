@@ -16,10 +16,10 @@
         </h1>
       </th>
       <th class="borderdebug" style="height: 100%; text-align: left" >
-        <img src="/images/cuccosch.png" alt="logo" style="height: 120px"/>
+        <img src="images/cuccosch.png" alt="logo" style="height: 120px"/>
       </th>
       <th class="borderdebug" style="width: 19%">
-        <a href="index.html">
+        <a href="/">
           <h1 class="wtext pages">
             Cuccok
           </h1>
@@ -30,6 +30,13 @@
           Tagok
         </h1>
       </th>
+      <th class="borderdebug" style="width: 17%">
+        <a href="/login">
+          <h1 class="wtext pages">
+            Belépés
+          </h1>
+        </a>
+      </th>
 
     </tr>
   </tb>
@@ -38,29 +45,29 @@
 
 <table style="width:80%; height:60%; padding-top: 50px;margin-left: 10%">
   <tr class="borderdebug" style="width:80%; height: 5%; text-align: center">
-    <th class="borderdebug szobacol">
+    <th class="borderdebug szobacol tablehead">
       <p class="font">
         Szoba
 
       </p>
     </th>
-    <th class="borderdebug cucccol">
+    <th class="borderdebug cucccol tablehead">
       <p class="font">
         Cuccok
 
       </p>
     </th>
-    <th class="borderdebug tagcol">
+    <th class="borderdebug tagcol tablehead">
       <p class="font">
         Lakok
 
       </p>
     </th>
 
-    <th class="borderdebug editcol">
+    <th class="borderdebug editcol tablehead">
     </th>
 
-    <th class="borderdebug deletecol">
+    <th class="borderdebug deletecol  tablehead">
     </th>
   </tr>
   <tr style="background: #DDDDDD; height: 20%"; >
@@ -80,25 +87,25 @@
       <p class="font">
         Pistike<br>
         Jozsika<br>
-        Én<br>
+        Mate<br>
       </p>
 
     </th>
 
     <th class="borderdebug editcol">
-      <a href="edittag.html">
+      <a href="/tagok/edit/1">
         <img src="images/icons/edit.svg", style="width: 60%; height: 60%">
       </a>
     </th>
 
     <th class="borderdebug deletecol">
-      <a href="">
+      <a href="/tagok/delete/1">
         <img src="images/icons/delete.svg", style="width: 60%; height: 60%">
       </a>
 
     </th>
   </tr>
-  <tr style="background: #DDDDDD; height: 20%"; >
+  <tr style="background: #FFFFFF; height: 20%"; >
     <th class="borderdebug szobacol">
       <p class="font">
         801
@@ -107,7 +114,7 @@
     </th>
     <th class="borderdebug cucccol">
       <p class="font">
-        Hosszabító, Fogó
+        Hosszabito, Fogo
       </p>
 
     </th>
@@ -116,19 +123,19 @@
         Jancsika<br>
         Zsuzsi<br>
         Erzsi<br>
-        Ádám<br>
+        Adam<br>
       </p>
 
     </th>
 
     <th class="borderdebug editcol">
-      <a href="edittag.html">
+      <a href="/tagok/edit/1">
         <img src="images/icons/edit.svg", style="width: 60%; height: 60%">
       </a>
     </th>
 
     <th class="borderdebug deletecol">
-      <a href="">
+      <a href="/tagok/delete/1">
         <img src="images/icons/delete.svg", style="width: 60%; height: 60%">
       </a>
 
@@ -147,11 +154,10 @@
     </th>
   </tr>
 </table>
-<a href="ujtag.html" style="position: absolute; right: 5%; bottom: 5%">
-  <div style="background-color: #b80c09; border-radius: 50%">
+<a href="/tagok/new" style="position: absolute; right: 5%; bottom: 5%" >
+  <div class="btn">
     <img src="images/icons/add.svg", style="width: 5rem; height: 5rem; color: white">
   </div>
-
 </a>
 </body>
 

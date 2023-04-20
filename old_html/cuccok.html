@@ -3,7 +3,8 @@
 <head>
   <title>Cuccosch</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="/logo.png" type="image/x-icon"/>
+  <link rel="icon" href="/images/logo.png" type="image/x-icon"/>
+  <script src="../routing/index.js"></script>
 </head>
 
 <body style="width:100%; margin: 0">
@@ -16,7 +17,7 @@
         </h1>
       </th>
       <th class="borderdebug" style="height: 100%; text-align: left" >
-        <img src="/images/cuccosch.png" alt="logo" style="height: 120px"/>
+        <img src="images/cuccosch.png" alt="logo" style="height: 120px"/>
       </th>
       <th class="borderdebug" style="width: 19%">
         <h1 class="wtext pages" style="background-color: #b80c09">
@@ -24,9 +25,16 @@
         </h1>
       </th>
       <th class="borderdebug" style="width: 17%">
-        <a href="tagok.html">
+        <a href="/tagok">
           <h1 class="wtext pages">
             Tagok
+          </h1>
+        </a>
+      </th>
+      <th class="borderdebug" style="width: 17%">
+        <a href="/login">
+          <h1 class="wtext pages">
+            Belépés
           </h1>
         </a>
       </th>
@@ -35,28 +43,27 @@
   </tb>
 
 </table>
-<table class="borderdebug" style="width:80%; height:60%; padding-top: 50px;margin-left: 10%">
-  <tr style="width:80%; height: 5%; text-align: center">
-    <th class="borderdebug namecol">
+<table class="borderdebug" style="width:80%; height:60%; padding-top: 50px;margin-left: 10%; border: none">
+  <tr style="width:80%; height: 5%; text-align: center; border: none">
+    <th class="borderdebug namecol tablehead">
       <p class="font">
         Nev
       </p>
     </th>
-    <th class="borderdebug avcol">
+    <th class="borderdebug avcol  tablehead">
       <p class="font">
         Elerhetoseg
-
       </p>
     </th>
-    <th class="borderdebug placecol">
+    <th class="borderdebug placecol  tablehead">
       <p class="font">
         Helyszin
       </p>
     </th>
-    <th class="borderdebug editcol">
+    <th class="borderdebug editcol tablehead">
     </th>
 
-    <th class="borderdebug deletecol">
+    <th class="borderdebug deletecol  tablehead">
 
     </th>
   </tr>
@@ -81,27 +88,27 @@
     </th>
 
     <th class="borderdebug editcol">
-      <a href="editcucc.html">
+      <a href="/cuccok/edit/1">
         <img src="images/icons/edit.svg", style="width: 60%; height: 60%">
       </a>
     </th>
 
     <th class="borderdebug deletecol">
-      <a href="">
+      <a href="/cuccok/delete/1">
         <img src="images/icons/delete.svg", style="width: 60%; height: 60%">
       </a>
 
     </th>
   </tr>
   </tr>
-  <tr style="background: #DDDDDD; height: 20%">
+  <tr style="background: #FFFFFF; height: 20%">
     <th class="borderdebug namecol">
       <p class="font">
         Eloszto
 
       </p>
     </th>
-    <th class="borderdebug avcol" style="text-align: center; vertical-align: center">
+    <th class="borderdebug avcol font" style="text-align: center; vertical-align: center">
       <h4 style="background-color: indianred " class="availability">
         Foglalt
       </h4>
@@ -114,13 +121,13 @@
     </th>
 
     <th class="borderdebug editcol">
-      <a href="editcucc.html">
+      <a href="/cuccok/edit/1">
         <img src="images/icons/edit.svg", style="width: 60%; height: 60%">
       </a>
     </th>
 
     <th class="borderdebug deletecol">
-      <a href="">
+      <a href="/cuccok/delete/1">
         <img src="images/icons/delete.svg", style="width: 60%; height: 60%">
       </a>
     </th>
@@ -141,11 +148,10 @@
     </th>
   </tr>
 </table>
-<a href="ujcucc.html" style="position: absolute; right: 5%; bottom: 5%">
-  <div style="background-color: #b80c09; border-radius: 50%">
+<a href="/newCucc" style="position: absolute; right: 5%; bottom: 5%" >
+  <div class="btn">
     <img src="images/icons/add.svg", style="width: 5rem; height: 5rem; color: white">
   </div>
-
 </a>
 
 </body>

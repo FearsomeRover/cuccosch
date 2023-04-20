@@ -1,0 +1,90 @@
+<html>
+<%- include('header') -%>
+
+<table class="coloredtable hfill" style="width:80%;margin-left: 10%">
+  <tr class="borderdebug center-align" style="width:80%; height: 5%">
+    <th class="borderdebug szobacol tablehead">
+      <p class="font">
+        Szoba
+
+      </p>
+    </th>
+    <th class="borderdebug cucccol tablehead">
+      <p class="font">
+        Cuccok
+
+      </p>
+    </th>
+    <th class="borderdebug tagcol tablehead">
+      <p class="font">
+        Lakok
+
+      </p>
+    </th>
+
+    <th class="borderdebug editcol tablehead">
+    </th>
+
+    <th class="borderdebug deletecol  tablehead">
+    </th>
+  </tr>
+  <% szobak.forEach(function(szoba){ %>
+    <tr style="height: 12%"; >
+      <th class="borderdebug szobacol">
+        <p class="font">
+          <%=szoba.tag%>
+        </p>
+      </th>
+      <th class="borderdebug cucccol">
+        <p class="font">
+          <%if(szoba.cuccok.length==0){%>
+            Nincs itt semmi
+          <%}else{%>
+            <% szoba.cuccok.forEach(function(cucc){ %>
+            <%=cucc%>,
+          <% })} %>
+        </p>
+      </th>
+      <th class="borderdebug tagcol">
+        <p class="font">
+          <% szoba.lakok.forEach(function(lako){ %>
+            <%=lako%><br>
+          <% }); %>
+        </p>
+      </th>
+      <th class="borderdebug editcol">
+        <a href="/szobak/edit/<%=szoba.id%>">
+          <img src="/images/icons/edit.svg" class="fill60">
+        </a>
+      </th>
+      <th class="borderdebug deletecol">
+        <a href="/szobak/delete/<%=szoba.id%>">
+          <img src="/images/icons/delete.svg" class="fill60">
+        </a>
+
+      </th>
+    </tr>
+  <% }); %>
+
+  <tr class="borderdebug">
+    <th class="borderdebug szobacol">
+    </th>
+    <th class="borderdebug cucccol">
+    </th>
+    <th class="borderdebug tagcol">
+    </th>
+    <th class="borderdebug editcol">
+    </th>
+    <th class="borderdebug deletecol">
+    </th>
+  </tr>
+</table>
+<a href="/szobak/new" style="position: absolute; right: 5%; bottom: 5%" >
+  <div class="btn primary_color">
+    <img src="images/icons/add.svg"class="white" style="width: 5rem; height: 5rem">
+  </div>
+</a>
+</body>
+
+
+</html>

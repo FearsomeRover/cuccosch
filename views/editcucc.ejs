@@ -1,0 +1,48 @@
+<html>
+<%- include('header') -%>
+</body>
+
+
+<form  style="padding-top: 10%">
+  <table class="wfill center-align">
+    <tr>
+      <th colspan="2" class="borderdebug center-align f50 black">
+        <p class="font">
+          Cucc tulajdonsádainak módosítása
+        </p>
+      </th>
+    </tr>
+    <tr class="borderdebug">
+      <th colspan="2" class="borderdebug">
+        <label for="" class="font f30">
+          Megnevezés<br>
+        </label>
+        <input type="text" value="<%=cucc.name%>" class='font center-align f30' style="width: 30%;margin: 30px"  ><br>
+        <label for="" class="font f30">
+          Helyszín:<br>
+        </label>
+        <input type="text" value="<%=cucc.place%>" class="tag font" style="margin-top: 30px", >
+      </th>
+    </tr>
+    <tr>
+
+      <th class="borderdebug" style="width: 50%; margin-left: 100%; padding-right: 20px" >
+        <input type="submit" value="Mentés" style="font-size: 20px;width: 30%;float: right;font-weight: bold"
+               class="wtext pages white center-align">
+      </th>
+      <th class="borderdebug left_align" style=" padding-left:20px">
+        <a href="/">
+          <h2 style="font-size: 20px;width: 30%" class="wtext pages center-align white" >
+            Mégse
+          </h2>
+        </a>
+
+
+      </th>
+    </tr>
+  </table>
+</form>
+
+
+</html>
+<style></style>

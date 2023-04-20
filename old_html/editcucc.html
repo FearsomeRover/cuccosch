@@ -2,7 +2,7 @@
 
 <head>
   <title>Tagok</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="icon" href="/logo.png" type="image/x-icon"/>
 </head>
 
@@ -19,14 +19,14 @@
         <img src="/images/cuccosch.png" alt="logo" style="height: 120px"/>
       </th>
       <th class="borderdebug" style="width: 19%">
-        <a href="index.html">
+        <a href="/">
           <h1 class="wtext pages">
             Cuccok
           </h1>
         </a>
       </th>
       <th class="borderdebug" style="width: 17%">
-        <a href="tagok.html">
+        <a href="/tagok">
           <h1 class="wtext pages">
             Tagok
           </h1>
@@ -40,11 +40,13 @@
 </body>
 
 
-<form action="/ujtag">
+<form >
   <table style="text-align: center; width: 100%">
     <tr>
-      <th colspan="2" class="borderdebug font" style="text-align: center; font-size: 50px; color: black">
-        Uj cucc hozzaadasa
+      <th colspan="2" class="borderdebug", style="text-align: center; font-size: 50px; color: black">
+        <p class="font">
+          Cucc tulajdonsagainak modositasa
+        </p>
       </th>
     </tr>
     <tr class="borderdebug">
@@ -52,12 +54,11 @@
         <label for="", style="font-size: 30px" class="font">
           Megnevezes<br>
         </label>
-        <input type="text", placeholder="Targy neve", style="text-align: center; width: 30%; font-size: 30px;margin: 30px"
-               class="font"><br>
+        <input type="text", value="Hajszarito", class='font' style="text-align: center; width: 30%; font-size: 30px;margin: 30px", ><br>
         <label for="", style="font-size: 30px;" class="font">
-          Helyszin<br>
+          Helyszin:<br>
         </label>
-        <input type="text" placeholder="Itt talalhato" class="tag font" style="margin-top: 30px", >
+        <input type="text" value="801" class="tag font" style="margin-top: 30px", >
       </th>
     </tr>
     <tr>
@@ -67,7 +68,7 @@
       float: right; border: none; font-weight: bold" class="wtext pages">
       </th>
       <th class="borderdebug" style="text-align: left; padding-left:20px">
-        <a href="index.html">
+        <a href="/">
           <h2 style="font-size: 20px;width: 30%; color: white; text-align: center" class="wtext pages" >
             Megse
           </h2>
