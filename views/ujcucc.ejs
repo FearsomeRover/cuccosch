@@ -1,6 +1,6 @@
 <html>
 <%- include('header') -%>
-<form action="/ujtag" style="padding-top: 10%">
+<form method="post" style="padding-top: 10%">
   <table class="wfill center-align">
     <tr>
       <th colspan="2" class="borderdebug font f50 center-align black">
@@ -9,15 +9,15 @@
     </tr>
     <tr class="borderdebug">
       <th colspan="2" class="borderdebug">
-        <label class="font f30" for="" style="font-size: 30px">
+        <label class="font f30" for="name" style="font-size: 30px">
           Megnevezés<br>
         </label>
-        <input type="text" class="font  center-align f30" placeholder="Tárgy neve" style="width: 30%;margin: 30px"
+        <input type="text" id="name" name="name" class="font  center-align f30" placeholder="Tárgy neve" style="width: 30%;margin: 30px"
                ><br>
-        <label for="" class="font f30">
+        <label for="place" class="font f30">
           Helyszín<br>
         </label>
-        <input type="text" placeholder="Itt található" class="tag font" style="margin-top: 30px", >
+        <input type="text" id="place" name="place" placeholder="Itt található" class="tag font" style="margin-top: 30px", >
       </th>
     </tr>
     <tr>

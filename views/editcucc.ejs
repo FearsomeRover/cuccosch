@@ -3,7 +3,7 @@
 </body>
 
 
-<form  style="padding-top: 10%">
+<form method="post" style="padding-top: 10%">
   <table class="wfill center-align">
     <tr>
       <th colspan="2" class="borderdebug center-align f50 black">
@@ -14,14 +14,14 @@
     </tr>
     <tr class="borderdebug">
       <th colspan="2" class="borderdebug">
-        <label for="" class="font f30">
+        <label for="name" class="font f30">
           Megnevezés<br>
         </label>
-        <input type="text" value="<%=cucc.name%>" class='font center-align f30' style="width: 30%;margin: 30px"  ><br>
-        <label for="" class="font f30">
+        <input type="text" name="name" id="name" value="<%=cucc.name%>" class='font center-align f30' style="width: 30%;margin: 30px"  ><br>
+        <label for="place" class="font f30">
           Helyszín:<br>
         </label>
-        <input type="text" value="<%=cucc.place%>" class="tag font" style="margin-top: 30px", >
+        <input id="place" name="place" type="text" value="<%=cucc.place%>" class="tag font" style="margin-top: 30px" >
       </th>
     </tr>
     <tr>

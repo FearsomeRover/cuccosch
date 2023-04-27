@@ -32,17 +32,10 @@
     <tr style="height: 12%"; >
       <th class="borderdebug szobacol">
         <p class="font">
-          <%=szoba.tag%>
+          <%=szoba.szobaszam%>
         </p>
       </th>
       <th class="borderdebug cucccol">
-        <p class="font">
-          <%if(szoba.cuccok.length==0){%>
-            Nincs itt semmi
-          <%}else{%>
-            <% szoba.cuccok.forEach(function(cucc){ %>
-            <%=cucc%>,
-          <% })} %>
         </p>
       </th>
       <th class="borderdebug tagcol">

@@ -1,6 +1,6 @@
 0<html>
 <%- include('header') -%>
-      <form  style="padding-top: 10%">
+      <form method="post" style="padding-top: 10%">
         <table class="center-align wfill">
           <tr>
             <th colspan="2" class="borderdebug center-align">
@@ -11,23 +11,23 @@
           </tr>
           <tr class="borderdebug">
         <th colspan="2" class="borderdebug">
-        <label for="" class="font f30" >
+        <label for="szobaszam" class="font f30" >
           Szobaszám:<br>
         </label>
-        <input class="font f30 center-align" type="text" value="<%=szoba.tag%>" style="width: 30%;margin: 30px", ><br>
-        <label class="font f30" for="">
+        <input id="szobaszam" name="szobaszam" class="font f30 center-align" type="text" value="<%=szoba.szobaszam%>" style="width: 30%;margin: 30px", ><br>
+        <label class="font f30" for="lako1">
           Lakók:<br>
         </label>
-          <% szoba.lakok.forEach(function(lako){%>
-            <input class="font tag"  type="text" value="<%=lako%>" style="margin-top: 30px" >
-                <br>
-          <% }); %>
+          <% for(let i = 0; i< szoba.lakok.length; i++){%>
+          <input id="lako<%=i - 1%>" name="lako<%=i%>"  class="font tag"  type="text" value="<%=szoba.lakok[i]%>" style="margin-top: 30px" >
+          <br>
+          <% } %>
     </th>
   </tr>
   <tr>
 
     <th class="borderdebug" style="width: 50%; margin-left: 100%; padding-right: 20px" >
-      <input type="submit" value="Mentés" style="font-size: 20px;width: 30%;
+      <input  type="submit" value="Mentés" style="font-size: 20px;width: 30%;
      float: right; font-weight: bold" class="wtext pages white center-align noBorder">
     </th>
     <th class="borderdebug left_align" style="padding-left:20px">

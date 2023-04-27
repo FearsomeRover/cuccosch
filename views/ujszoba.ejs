@@ -1,6 +1,6 @@
 <html>
 <%- include('header') -%>
-<form action="/ujtag" style="padding-top: 10%">
+<form method="post" style="padding-top: 10%">
     <table class="center-align wfill">
         <tr>
             <th colspan="2" class="borderdebug center-align">
@@ -11,21 +11,21 @@
         </tr>
         <tr class="borderdebug">
             <th colspan="2" class="borderdebug">
-                <label for="" class="font f30">
+                <label for="szobaszam" class="font f30">
                     Szobaszám:<br>
                 </label>
-                <input class="font f30" type="text" placeholder="Szobaszám"
+                <input id="szobaszam" name="szobaszam" class="font f30" type="text" placeholder="Szobaszám"
                        style="text-align: center; width: 30%;margin: 30px"><br>
                 <label class="font f30" for="">
                     Tagok:<br>
                 </label>
-                <input class="font tag" type="text" placeholder="Tag1" style="margin-top: 30px">
+                <input id="lako1" name="lako1" class="font tag" type="text" placeholder="Tag1" style="margin-top: 30px">
                 <br>
-                <input class="font tag" type="text" placeholder="Tag2">
+                <input id="lako2" name="lako2" class="font tag" type="text" placeholder="Tag2">
                 <br>
-                <input class="font tag" type="text" placeholder="Tag3">
+                <input id="lako3" name="lako3" class="font tag" type="text" placeholder="Tag3">
                 <br>
-                <input class="font tag" type="text" placeholder="Tag4">
+                <input id="lako4" name="lako4" class="font tag" type="text" placeholder="Tag4">
             </th>
         </tr>
         <tr>

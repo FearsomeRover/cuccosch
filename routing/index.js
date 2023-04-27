@@ -10,29 +10,40 @@ const delSzobaMW = require("../middleware/szoba/delSzobaMW")
 const getSzobakMW = require("../middleware/szoba/getSzobakMW")
 const getSzobaMW = require("../middleware/szoba/getSzobaMW")
 const saveSzobaMW = require("../middleware/szoba/saveSzobaMW")
-const redirectMW = require("../middleware/redirectMW")
 
+const cuccModel = require("../models/cucc")
+const szobaModel = require("../models/szoba")
 
 module.exports = function (app){
-    const objRepo = {};
+    const objRepo = {
+        cuccModel:cuccModel,
+        szobaModel: szobaModel,
+    };
 
     app.get("/newCucc",
         authMW(objRepo),
-        saveCuccMW(objRepo),
         renderMW(objRepo, 'ujcucc', 'cuccok')
+    )
+    app.post("/newCucc",
+        authMW(objRepo),
+        saveCuccMW(objRepo)
     )
 
     app.get("/cuccok/edit/:cuccid",
         authMW(objRepo),
         getCuccMW(objRepo),
-        saveCuccMW(objRepo),
         renderMW(objRepo, "editcucc", 'cuccok'),
-
+    )
+    app.post("/cuccok/edit/:cuccid",
+        authMW(objRepo),
+        getCuccMW(objRepo),
+        //(req, res, next)=>{console.log(req); next();},
+        saveCuccMW(objRepo)
     )
     app.get("/cuccok/delete/:cuccid",
-        delCuccMW(objRepo),
-        redirectMW(objRepo, "/", 'cuccok')
-
+        authMW(objRepo),
+        getCuccMW(objRepo),
+        delCuccMW(objRepo)
     )
     app.get("/szobak",
         getSzobakMW(objRepo),
@@ -40,27 +51,37 @@ module.exports = function (app){
     )
     app.get("/szobak/new",
         authMW(objRepo),
-        saveSzobaMW(objRepo),
         renderMW(objRepo, "ujszoba", 'szobak')
+    )
+    app.post("/szobak/new",
+        authMW(objRepo),
+        saveSzobaMW(objRepo),
     )
     app.get("/szobak/edit/:szobaid",
         authMW(objRepo),
         getSzobaMW(objRepo),
-        saveSzobaMW(objRepo),
+        //(req, res, next)=>{console.log(res.locals.szoba); next();},
         renderMW(objRepo, "editszoba", 'szobak')
     )
+    app.post("/szobak/edit/:szobaid",
+        authMW(objRepo),
+        getSzobaMW(objRepo),
+        saveSzobaMW(objRepo)
+    )
     app.get("/szobak/delete/:szobaid",
-        delSzobaMW(objRepo),
-        redirectMW(objRepo, "/szobak")
-)
+        authMW(objRepo),
+        getSzobaMW(objRepo),
+        delSzobaMW(objRepo)
+    )
 
     app.get("/login",
-        authMW(objRepo),
         renderMW(objRepo, "login", 'cuccok'),
+    )
+    app.post("/login",
+        authMW(objRepo)
     )
     app.get("/",
         getCuccokMW(objRepo),
         renderMW(objRepo, 'cuccok', 'cuccok')
     )
-
 }
