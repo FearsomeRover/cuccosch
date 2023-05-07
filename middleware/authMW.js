@@ -1,5 +1,11 @@
 module.exports = function (objectrepository) {
     return function (req, res, next) {
+        console.log(req.session);
+        if(typeof req.session.admin === 'undefined' || req.session.admin === false){
+            console.log('nologin');
+            return res.redirect("/");
+        }
+
         next();
     };
 };

@@ -1,6 +1,5 @@
 var Schema = require('mongoose').Schema;
 var db = require('../config/db');
-const mongoose = require("mongoose");
 
 var Cucc = db.model('Cucc', {
     name: {

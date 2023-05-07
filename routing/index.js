@@ -2,6 +2,7 @@
 
 const authMW = require("../middleware/authMW")
 const renderMW = require("../middleware/renderMW")
+const passwordConfirmMW = require("../middleware/passwordConfirmMW")
 const delCuccMW = require("../middleware/cucc/delCucc")
 const getCuccokMW = require("../middleware/cucc/getCuccokMW")
 const getCuccMW = require("../middleware/cucc/getCuccMW")
@@ -37,7 +38,6 @@ module.exports = function (app){
     app.post("/cuccok/edit/:cuccid",
         authMW(objRepo),
         getCuccMW(objRepo),
-        //(req, res, next)=>{console.log(req); next();},
         saveCuccMW(objRepo)
     )
     app.get("/cuccok/delete/:cuccid",
@@ -60,7 +60,6 @@ module.exports = function (app){
     app.get("/szobak/edit/:szobaid",
         authMW(objRepo),
         getSzobaMW(objRepo),
-        //(req, res, next)=>{console.log(res.locals.szoba); next();},
         renderMW(objRepo, "editszoba", 'szobak')
     )
     app.post("/szobak/edit/:szobaid",
@@ -75,9 +74,10 @@ module.exports = function (app){
     )
 
     app.get("/login",
-        renderMW(objRepo, "login", 'cuccok'),
+        renderMW(objRepo, "login", 'cuccok')
     )
     app.post("/login",
+        passwordConfirmMW(objRepo),
         authMW(objRepo)
     )
     app.get("/",
