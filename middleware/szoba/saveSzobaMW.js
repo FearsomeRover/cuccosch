@@ -10,7 +10,6 @@ module.exports = function (objectrepository) {
         }
         res.locals.szoba.szobaszam = req.body.szobaszam;
         res.locals.szoba.lakok = [req.body.lako1,req.body.lako2,req.body.lako3,req.body.lako4]
-
         return res.locals.szoba.save(err => {
             if (err) {
                 return next(err);

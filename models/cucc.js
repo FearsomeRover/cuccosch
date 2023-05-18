@@ -7,10 +7,10 @@ var Cucc = db.model('Cucc', {
         required: true,
     },
     elerheto: Boolean,
-    // _place: {
-    //     type: Schema.Types.ObjectId,
-    //     ref:"Szoba",
-    // }
+    _place: {
+        type: Schema.Types.ObjectId,
+        ref:"Szoba",
+    },
     place: Number
 
 });

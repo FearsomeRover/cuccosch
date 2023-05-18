@@ -7,10 +7,10 @@ var Szoba = db.model('Szoba', {
         required: true,
     },
     lakok: [String],
-    // _items: {
-    //     type: [Schema.Types.ObjectId],
-    //     ref:"Cucc",
-    // }
+    _items: {
+        type: [Schema.Types.ObjectId],
+        ref:"Cucc",
+    },
     items: [String]
 
 });

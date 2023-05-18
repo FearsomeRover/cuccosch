@@ -1,6 +1,6 @@
 module.exports = function (objectrepository) {
     return function (req, res, next) {
-        return objectrepository.cuccModel.find({}, (err, cuccok)=>{
+        return objectrepository.cuccModel.find().populate('_place').exec({}, (err, cuccok)=>{
             if(err){
                 return next(err);
             }

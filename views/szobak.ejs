@@ -1,17 +1,11 @@
 <html>
 <%- include('header') -%>
 
-<table class="coloredtable hfill" style="width:80%;margin-left: 10%">
+<table class="coloredtable hfill" style="width:60%;margin-left: 20%">
   <tr class="borderdebug center-align" style="width:80%; height: 5%">
     <th class="borderdebug szobacol tablehead">
       <p class="font">
         Szoba
-
-      </p>
-    </th>
-    <th class="borderdebug cucccol tablehead">
-      <p class="font">
-        Cuccok
 
       </p>
     </th>
@@ -29,19 +23,16 @@
     </th>
   </tr>
   <% szobak.forEach(function(szoba){ %>
-    <tr style="height: 12%"; >
+    <tr style="height: 12%" >
       <th class="borderdebug szobacol">
         <p class="font">
           <%=szoba.szobaszam%>
         </p>
       </th>
-      <th class="borderdebug cucccol">
-        </p>
-      </th>
       <th class="borderdebug tagcol">
         <p class="font">
           <% szoba.lakok.forEach(function(lako){ %>
-            <%=lako%><br>
+            <%=lako%>
           <% }); %>
         </p>
       </th>
@@ -61,8 +52,6 @@
 
   <tr class="borderdebug" style="background-color: white">
     <th class="borderdebug szobacol">
-    </th>
-    <th class="borderdebug cucccol">
     </th>
     <th class="borderdebug tagcol">
     </th>

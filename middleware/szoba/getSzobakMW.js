@@ -1,6 +1,6 @@
 module.exports = function (objectrepository) {
     return function (req, res, next) {
-        return objectrepository.szobaModel.find({}, (err, results)=>{
+        return objectrepository.szobaModel.find().populate('_items').exec({}, (err, results)=>{
             if(err){
                 return next(err);
             }

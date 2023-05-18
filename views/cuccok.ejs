@@ -32,20 +32,22 @@
         </p>
       </th>
       <th class="borderdebug avcol font center-align" style="vertical-align: center">
-        <% if(cucc.availability){%>
-          <h4 style="background-color: darkseagreen" class="availability font">
+        <a href="/cuccok/state/<%=cucc.id%>">
+        <% if(cucc.elerheto){%>
+          <h4 style="background-color: darkseagreen; color: #000000" class="availability font">
             Elérhető
           </h4>
         <%}else{%>
-          <h4 style="background-color: indianred " class="availability font">
+          <h4 style="background-color: indianred; color: #000000" class="availability font">
             Foglalt
           </h4>
         <%}%>
+        </a>
 
       </th>
       <th class="borderdebug placecol">
         <p class="font">
-          <%=cucc.place%>
+          <%= typeof cucc._place === 'undefined' ? "" : cucc._place.szobaszam%>
         </p>
       </th>
 

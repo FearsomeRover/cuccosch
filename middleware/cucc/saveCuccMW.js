@@ -10,8 +10,8 @@ module.exports = function (objectrepository) {
             res.locals.cucc = new objectrepository.cuccModel();
         }
         res.locals.cucc.name = req.body.name;
-        res.locals.cucc.place = req.body.place;
         res.locals.cucc.elerheto = true;
+        res.locals.cucc._place = req.body.place;
         return res.locals.cucc.save(err => {
             if (err) {
                 return next(err);

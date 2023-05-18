@@ -13,6 +13,19 @@
 .f30{
   font-size: 30px;
 }
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
 /*.borderdebug{*/
 /*  border: black;*/
 /*  border-style: dashed;*/
@@ -53,7 +66,7 @@ a{
   width:5%
 }
 .szobacol{
-  padding-left: 20px;
+  padding-left: 10%;
   text-align: left
 }
 .cucccol{
@@ -63,7 +76,7 @@ a{
 }
 .tagcol{
   padding-left: 20px;
-  width: 15%;
+  width: 60%;
   text-align: center
 }
 .editcol{
