@@ -1,12 +1,15 @@
 module.exports = function (objectrepository) {
     return function (req, res, next) {
-        if(req.params.szobaid === 'undefined'){
+        if(typeof(req.params.szobaid) === 'undefined'){
             return res.redirect('/');
         }
         return objectrepository.szobaModel.findOne({
             _id: req.params.szobaid }, (err, result) => {
-            if (err || !result) {
+            if (err) {
                 return next(err);
+            }
+            if(!result){
+                res.redirect('/');
             }
 
             res.locals.szoba = result;

@@ -64,6 +64,7 @@ module.exports = function (app){
     )
     app.get("/szobak/delete/:szobaid",
         getSzobaMW(objRepo),
+        getCuccokMW(objRepo),
         delSzobaMW(objRepo)
     )
     app.get("/",
